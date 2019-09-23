@@ -16,6 +16,9 @@
 
 import java.util.Scanner;
 
+// import jdk.javadoc.internal.doclets.formats.html.SourceToHTMLConverter;
+// import sun.swing.PrintColorUIResource;
+
 public class ProblemSet2 {
     
     public static void main(String[] args) {
@@ -27,9 +30,22 @@ public class ProblemSet2 {
          * Prompt the user to enter the following information (in order): first name, last
          * name, grade, age, and hometown.
          */
+        
+        System.out.print("\nEnter your first name: ");
+        String firstName = in.nextLine();
+        System.out.print("Enter your last name: ");
+        String lastName = in.nextLine();
+        System.out.print("Enter your grade: ");
+        String grade = in.nextLine();
+        System.out.print("Enter your age: ");
+        String age = in.nextLine();
+        System.out.print("Enter your hometown: ");
+        String homeTown = in.nextLine();
+        System.out.printf("\nNAME     : %s %s", firstName, lastName);
+        System.out.printf("\nGRADE    : %s", grade);
+        System.out.printf("\nAGE      : %s", age);
+        System.out.printf("\nHOMETOWN : %s\n\n", homeTown);
 
-        
-        
         /*
          * Exercise 2.
          * 
