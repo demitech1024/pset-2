@@ -96,7 +96,7 @@ public class ProblemSet2 {
         System.out.print("\nEnter a dollar amount: ");
         double dollarAmountTwo = in.nextDouble();
 
-        int tempVar;
+        int tempVar; // To help manage adding numbers to both the numBill variable and numCoin variable
         tempVar = (int) Math.floor(dollarAmountTwo / TEN_DOLLAR_VALUE);
         int numBill = tempVar;
         dollarAmountTwo -= tempVar * TEN_DOLLAR_VALUE;
