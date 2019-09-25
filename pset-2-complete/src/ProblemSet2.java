@@ -54,32 +54,32 @@ public class ProblemSet2 {
          * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
          */
         
-        final double dollarValue = 1.00;
-        final double quarterValue = 0.25;
-        final double dimeValue = 0.10;
-        final double nickelValue = 0.05;
-        final double pennyValue = 0.01;
+        final double DOLLAR_VALUE = 1.00;
+        final double QUARTER_VALUE = 0.25;
+        final double DIME_VALUE = 0.10;
+        final double NICKEL_VALUE = 0.05;
+        final double PENNY_VALUE = 0.01;
 
         System.out.print("\nEnter a dollar amount: ");
         double dollarAmount = in.nextDouble();
 
-        int numDollar = (int) Math.floor(dollarAmount / dollarValue);
+        int numDollar = (int) Math.floor(dollarAmount / DOLLAR_VALUE);
         System.out.println("\nDOLLARS  : " + numDollar);
-        dollarAmount -= ((double) numDollar) * dollarValue;
+        dollarAmount -= ((double) numDollar) * DOLLAR_VALUE;
 
-        int numQuarter = (int) Math.floor(dollarAmount / quarterValue);
+        int numQuarter = (int) Math.floor(dollarAmount / QUARTER_VALUE);
         System.out.println("QUARTERS : " + numQuarter);
-        dollarAmount -= ((double) numQuarter) * quarterValue;
+        dollarAmount -= ((double) numQuarter) * QUARTER_VALUE;
 
-        int numDime = (int) Math.floor(dollarAmount / dimeValue);
+        int numDime = (int) Math.floor(dollarAmount / DIME_VALUE);
         System.out.println("DIMES    : " + numDime);
-        dollarAmount -= ((double) numDime) * dimeValue;
+        dollarAmount -= ((double) numDime) * DIME_VALUE;
 
-        int numNickel = (int) Math.floor(dollarAmount / nickelValue);
+        int numNickel = (int) Math.floor(dollarAmount / NICKEL_VALUE);
         System.out.println("NICKELS  : " + numNickel);
-        dollarAmount -= ((double) numNickel) * nickelValue;
+        dollarAmount -= ((double) numNickel) * NICKEL_VALUE;
 
-        int numPenny = (int) Math.floor(dollarAmount / pennyValue);
+        int numPenny = (int) Math.floor(dollarAmount / PENNY_VALUE);
         System.out.println("PENNIES  : " + numPenny);
         
 
@@ -90,10 +90,38 @@ public class ProblemSet2 {
          * bills and coins needed to produce this amount.
          */
 
+        final double TEN_DOLLAR_VALUE = 10.00;
+        final double FIVE_DOLLAR_VALUE = 5.00;
+        
         System.out.print("\nEnter a dollar amount: ");
+        double dollarAmountTwo = in.nextDouble();
 
-        System.out.println("BILLS : ");
-        System.out.println("COINS : ");
+        int tempVar;
+        tempVar = (int) Math.floor(dollarAmountTwo / TEN_DOLLAR_VALUE);
+        int numBill = tempVar;
+        dollarAmountTwo -= tempVar * TEN_DOLLAR_VALUE;
+        tempVar = (int) Math.floor(dollarAmountTwo / FIVE_DOLLAR_VALUE);
+        numBill += tempVar;
+        dollarAmountTwo -= tempVar * FIVE_DOLLAR_VALUE;
+        tempVar = (int) Math.floor(dollarAmountTwo / DOLLAR_VALUE);
+        numBill += tempVar;
+        dollarAmountTwo -= tempVar * DOLLAR_VALUE;
+
+        tempVar = (int) Math.floor(dollarAmountTwo / QUARTER_VALUE);
+        int numCoin = tempVar;
+        dollarAmountTwo -= tempVar * QUARTER_VALUE;
+        tempVar = (int) Math.floor(dollarAmountTwo / DIME_VALUE);
+        numCoin += tempVar;
+        dollarAmountTwo -= tempVar * DIME_VALUE;
+        tempVar = (int) Math.floor(dollarAmountTwo / NICKEL_VALUE);
+        numCoin += tempVar;
+        dollarAmountTwo -= tempVar * NICKEL_VALUE;
+        tempVar = (int) Math.floor(dollarAmountTwo / PENNY_VALUE);
+        numCoin += tempVar;
+
+
+        System.out.println("\nBILLS : " + numBill);
+        System.out.println("COINS : " + numCoin);
         
 
         /*
