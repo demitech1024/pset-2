@@ -186,8 +186,8 @@ public class ProblemSet2 {
 
         double circumference = diameter * Math.PI; 
         double area = Math.pow(radius, 2) * Math.PI;
-        System.out.printf("\n\nAREA          : %f\n", area);
-        System.out.printf("CIRCUMFERENCE : %f\n", circumference);
+        System.out.printf("\n\nAREA          : %.2f\n", area);
+        System.out.printf("CIRCUMFERENCE : %.2f\n", circumference);
         
 
         /*
