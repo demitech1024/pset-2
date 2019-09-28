@@ -32,20 +32,20 @@ public class ProblemSet2 {
          * name, grade, age, and hometown.
          */
         
-        // System.out.print("\nEnter your first name: ");
-        // String firstName = in.nextLine();
-        // System.out.print("Enter your last name: ");
-        // String lastName = in.nextLine();
-        // System.out.print("Enter your grade: ");
-        // String grade = in.nextLine();
-        // System.out.print("Enter your age: ");
-        // String age = in.nextLine();
-        // System.out.print("Enter your hometown: ");
-        // String homeTown = in.nextLine();
-        // System.out.printf("\nNAME     : %s %s", firstName, lastName);
-        // System.out.printf("\nGRADE    : %s", grade);
-        // System.out.printf("\nAGE      : %s", age);
-        // System.out.printf("\nHOMETOWN : %s\n", homeTown);
+        System.out.print("\nEnter your first name: ");
+        String firstName = in.nextLine();
+        System.out.print("Enter your last name: ");
+        String lastName = in.nextLine();
+        System.out.print("Enter your grade: ");
+        String grade = in.nextLine();
+        System.out.print("Enter your age: ");
+        String age = in.nextLine();
+        System.out.print("Enter your hometown: ");
+        String homeTown = in.nextLine();
+        System.out.printf("\nNAME     : %s %s", firstName, lastName);
+        System.out.printf("\nGRADE    : %s", grade);
+        System.out.printf("\nAGE      : %s", age);
+        System.out.printf("\nHOMETOWN : %s\n", homeTown);
 
         /*
          * Exercise 2.
@@ -96,7 +96,7 @@ public class ProblemSet2 {
         System.out.print("\nEnter a dollar amount: ");
         double dollarAmountTwo = in.nextDouble();
 
-        int tempVar; // To help manage adding numbers to both the numBill variable and numCoin variable
+        int tempVar;
         tempVar = (int) Math.floor(dollarAmountTwo / TEN_DOLLAR_VALUE);
         int numBill = tempVar;
         dollarAmountTwo -= tempVar * TEN_DOLLAR_VALUE;
@@ -131,6 +131,24 @@ public class ProblemSet2 {
          * and inches.
          */
 
+        final int INCHES_IN_MILE = 63360;
+        final int INCHES_IN_YARD = 36;
+        final int INCHES_IN_FOOT = 12;
+
+        System.out.print("\nEnter a number of inches: ");
+        int numOfInches = in.nextInt();
+        int miles  = (int) Math.floor((double) numOfInches / INCHES_IN_MILE);
+        numOfInches -= miles * INCHES_IN_MILE;
+        int yards  = (int) Math.floor((double) numOfInches / INCHES_IN_YARD);
+        numOfInches -= yards * INCHES_IN_YARD;
+        int feet   = (int) Math.floor((double) numOfInches / INCHES_IN_FOOT);
+        numOfInches -= feet  * INCHES_IN_FOOT;
+        int inches = numOfInches;
+
+        System.out.printf("\nMILES  : %d", miles);
+        System.out.printf("\nYARDS  : %d", yards);
+        System.out.printf("\nFEET   : %d", feet);
+        System.out.printf("\nINCHES : %d\n", inches);
 
         
         /*
@@ -140,7 +158,21 @@ public class ProblemSet2 {
          * meters, and centimeters.
          */
         
+        final int CENTIMETERS_IN_KILOMETER = 100000;
+        final int CENTIMETERS_IN_METER = 100;
 
+        System.out.print("\nEnter a number of centimeters: ");
+        int numOfCentimeters = in.nextInt();
+
+        int kilometers = (int) Math.floor((double) numOfCentimeters / CENTIMETERS_IN_KILOMETER);
+        numOfCentimeters -= kilometers * CENTIMETERS_IN_KILOMETER;
+        int meters     = (int) Math.floor((double) numOfCentimeters / CENTIMETERS_IN_METER);
+        numOfCentimeters -= meters * CENTIMETERS_IN_METER;
+        int centimeters = numOfCentimeters;
+
+        System.out.printf("\nKILOMETERS  : %d", kilometers);
+        System.out.printf("\nMETERS      : %d", meters);
+        System.out.printf("\nCENTIMETERS : %d\n", centimeters);
         
         /*
          * Exercise 6.
@@ -148,7 +180,15 @@ public class ProblemSet2 {
          * Given a diameter, print the area and circumference of the corresponding circle.
          */
         
+        System.out.print("\nEnter a diameter: ");
+        double diameter = in.nextDouble();
+        double radius = diameter / 2;
 
+        double circumference = diameter * Math.PI; 
+        double area = Math.pow(radius, 2) * Math.PI;
+        System.out.printf("\n\nAREA          : %f\n", area);
+        System.out.printf("CIRCUMFERENCE : %f\n", circumference);
+        
 
         /*
          * Exercise 7.
