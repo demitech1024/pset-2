@@ -197,7 +197,18 @@ public class ProblemSet2 {
          * corresponding rectangle.
          */
         
+        System.out.print("\nEnter a length: ");
+        double length = in.nextDouble();
+        System.out.print("Enter a width: ");
+        double width = in.nextDouble();
 
+        double rectArea = length * width;
+        double rectPerimeter = (length * 2) + (width * 2);
+        double rectDiagonal = Math.hypot(length, width);
+
+        System.out.printf("\nAREA      : %.2f\n", rectArea);
+        System.out.printf("PERIMETER : %.2f\n", rectPerimeter);
+        System.out.printf("DIAGONAL  : %.2f\n", rectDiagonal);
         
         /*
          * Exercise 8.
